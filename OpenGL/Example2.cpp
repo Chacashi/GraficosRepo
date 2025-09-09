@@ -25,58 +25,147 @@ void Example2::Render()
 
 void Example2::Ejercicio1()
 {
-	//glPushMatrix();
-	//glTranslatef(5.0f, 0.0f, 0.0f);
-	//glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
-	//glScalef(1.0f, 2.0f, 1.0f);
+	
+	DrawCube(7.0f);
 
-	//glPointSize(15.0f);
-	//glBegin(GL_POINTS);
-	//glColor3f(1.0f, 0.0f, 0.0f);
-	//glVertex3f(0.0f, 0.0f, 0.0f);
+}
 
-	//glEnd();
+void Example2::DrawPoint() {
 
-	//glPopMatrix();	
+	glPushMatrix();
+	glTranslatef(5.0f, 0.0f, 0.0f);
+	glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
+	glScalef(1.0f, 2.0f, 1.0f);
 
+	glPointSize(15.0f);
+	glBegin(GL_POINTS);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 0.0f, 0.0f);
 
-	//glPushMatrix();
-	//	glTranslatef(5.0f, 0.0f, 0.0f);
-	//	glRotated(45.0f, 0.0f, 0.0f, 1.0f);
-	//	glScalef(10.0f, 2.0f, 1.0f);
+	glEnd();
 
-	//	glLineWidth(5.0f);
-	//	glBegin(GL_LINES);
-	//		glColor3f(1.0f, 0.0f, 0.0f);
-	//		glVertex3f(0.0f, 0.0f, 0.0f);
-	//		glVertex3f(20.0f, 0.0f, 0.0f);
-	//	glEnd();
-	//glPopMatrix();
+	glPopMatrix();
 
+}
 
-	//glPushMatrix();
-	//glTranslatef(5.0f, 0.0f, 0.f);
-	//glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
-	//glScalef(10.0f, 2.0f, 1.0f);
+void Example2::DrawCube(float distance)
+{
+	glPushMatrix();
+	glTranslatef(5.0f, 0.0f, 0.0f);
+	glRotatef(270.0f, 0.0f, 0.0f, 1.0f);
+	glScalef(1.0f, 2.0f, 1.0f);
 
-	//	glLineWidth(5.0f);
-	//	glBegin(GL_LINES);
+	glLineWidth(10.0f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glBegin(GL_TRIANGLES);
 
-	//		glColor3f(1.0f, 0.0f, 0.0f);
-	//		glVertex3f(0.0f, 0.0f, 0.0f);
-	//		glVertex3f(20.0f, 0.0f, 0.0f);
-
-	//		glColor3f(0.0f, 1.0f, 0.0f);
-	//		glVertex3f(0.0f, 0.0f, 0.0f);
-	//		glVertex3f(0.0f, 20.0f, 0.0f);
-
-	//	glEnd();
-
-	//glPopMatrix();
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(-distance, distance, distance);
 
 
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
 
 
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(-distance, distance, -distance);
+	glVertex3f(-distance, -distance, -distance);
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(-distance, -distance, -distance);
+
+
+
+	glVertex3f(-distance, -distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+
+
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+	glVertex3f(-distance, -distance, -distance);
+
+	glEnd();
+
+	glPopMatrix();
+
+		
+
+}
+
+
+
+
+
+void Example2::DrawLine() {
+	glPushMatrix();
+	glTranslatef(5.0f, 0.0f, 0.0f);
+	glRotated(45.0f, 0.0f, 0.0f, 1.0f);
+	glScalef(10.0f, 2.0f, 1.0f);
+
+	glLineWidth(5.0f);
+	glBegin(GL_LINES);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(20.0f, 0.0f, 0.0f);
+	glEnd();
+	glPopMatrix();
+}
+
+void Example2::DrawAxisXY(){
+
+	glPushMatrix();
+	glTranslatef(5.0f, 0.0f, 0.f);
+	glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
+	glScalef(10.0f, 2.0f, 1.0f);
+
+	glLineWidth(5.0f);
+	glBegin(GL_LINES);
+
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(20.0f, 0.0f, 0.0f);
+
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 20.0f, 0.0f);
+
+	glEnd();
+
+	glPopMatrix();
+
+}
+
+void Example2::DrawAxisXYZ() {
 
 	glLineWidth(5.0f);
 	glBegin(GL_LINES);
@@ -108,10 +197,6 @@ void Example2::Ejercicio1()
 	glVertex3f(0.0f, 0.0f, 0.0f);
 	glEnd();
 	glPopMatrix();
-
-
-
-
 }
 
 void Example2::Ejercicio2()

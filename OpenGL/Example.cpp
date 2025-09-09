@@ -30,7 +30,7 @@ void Example::DrawGrids()
 	glLineWidth(1.0f);
 	glBegin(GL_LINES);
 	glColor3f(0.5f, 0.5f, 0.5f);
-	for (int i = -100; i <= 100; i += 5)
+	for (float i = -100; i <= 100; i += 5)
 	{
 		glVertex3f(i, 0.0f, -100.0f);
 		glVertex3f(i, 0.0f, 100.0f);
