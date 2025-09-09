@@ -18,7 +18,6 @@
 
 # Static Libraries
 *.a
-*.lib
 *.la
 *.lai
 
