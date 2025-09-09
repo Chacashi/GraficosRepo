@@ -24,7 +24,6 @@
 # Dynamic Libraries
 *.so
 *.dylib
-*.dll
 
 # Executables
 *.exe
