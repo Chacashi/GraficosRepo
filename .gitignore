@@ -1,41 +1,82 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# ──────────────────────────────
+# 🔧 Build Artifacts
+# ──────────────────────────────
 *.o
 *.obj
+*.lo
+*.slo
+*.d
+*.dwo
 
 # Precompiled Headers
 *.gch
 *.pch
 
-# Linker files
+# Linker & Debugger Files
 *.ilk
-
-# Debugger Files
 *.pdb
 
-# Compiled Dynamic libraries
+# Static Libraries
+*.a
+*.lib
+*.la
+*.lai
+
+# Dynamic Libraries
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
 # Executables
 *.exe
 *.out
 *.app
 
-# debug information files
-*.dwo
+# Fortran Module Files
+*.mod
+*.smod
+
+# ──────────────────────────────
+# 📦 CMake Generated Files
+# ──────────────────────────────
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# If using CMake build directory
+build/
+
+# ──────────────────────────────
+# 💻 IDE/Editor Files
+# ──────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+
+# Visual Studio Specific
+.vs/
+*.vcxproj.user
+*.suo
+
+# ──────────────────────────────
+# 📄 Logs & Temp Files
+# ──────────────────────────────
+*.log
+*.tmp
+temp/
+
+# ──────────────────────────────
+# 📚 External Libraries (Optional)
+# ──────────────────────────────
+# Uncomment if you manage third-party libs manually
+# libraries/
+# external/
+
+# ──────────────────────────────
+# 🧑‍💻 User-specific Configs (Optional)
+# ──────────────────────────────
+# Uncomment if you use local-only config files
+# my_config.ini
+
