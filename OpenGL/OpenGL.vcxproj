@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Usuario\Desktop\GraficosRepo\freeglut\include;C:\Users\Usuario\Desktop\GraficosRepo\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\USUARIO\Desktop\OpenGL\freeglut\include;C:\Users\USUARIO\Desktop\OpenGL\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Usuario\Desktop\GraficosRepo\glew-2.1.0\lib\Release\Win32;C:\Users\Usuario\Desktop\GraficosRepo\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\USUARIO\Desktop\OpenGL\glew-2.1.0\lib\Release\Win32;C:\Users\USUARIO\Desktop\OpenGL\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -159,7 +159,9 @@
     <ClCompile Include="Piramide.cpp" />
     <ClCompile Include="Poligono.cpp" />
     <ClCompile Include="Punto3D.cpp" />
+    <ClCompile Include="Rectangulo.cpp" />
     <ClCompile Include="Triangulo.cpp" />
+    <ClCompile Include="Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circulo.h" />
@@ -176,8 +178,10 @@
     <ClInclude Include="Piramide.h" />
     <ClInclude Include="Poligono.h" />
     <ClInclude Include="Punto3D.h" />
+    <ClInclude Include="Rectangulo.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Triangulo.h" />
+    <ClInclude Include="Vector3D.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OpenGL.rc" />

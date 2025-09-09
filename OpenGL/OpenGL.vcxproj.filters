@@ -31,6 +31,9 @@
     <Filter Include="Archivos de origen\Figuras">
       <UniqueIdentifier>{eeb952c4-23ef-4a48-9761-8f6cd275e331}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Vector">
+      <UniqueIdentifier>{d18555cc-3f86-4173-a365-8b36acfbfb42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -77,6 +80,12 @@
     </ClCompile>
     <ClCompile Include="Example2.cpp">
       <Filter>Archivos de origen\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangulo.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +136,12 @@
     </ClInclude>
     <ClInclude Include="Example2.h">
       <Filter>Archivos de encabezado\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>Archivos de encabezado\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangulo.h">
+      <Filter>Archivos de encabezado\Figuras</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
