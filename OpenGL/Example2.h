@@ -17,6 +17,13 @@ class Example2 :
 		void DrawAxisXYZ();
 		void DrawPoint();
 		void DrawCube(float distance);
+		void DrawCube(int distance);
+		void DrawSphere(int  radius);
+		void DrawPyramid(float distance);
+		void DrawRectangle(int base, int height);
+		void DrawSquare(int distance);
+		void Circle(float radius , int segments);
+
 		void Ejercicio1();
 		void Ejercicio2();
 		void Ejercicio3();

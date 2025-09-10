@@ -1,6 +1,7 @@
 #include "Example2.h"
 #include "IncludeGL.h"
 #include <cmath>
+#include <numbers>
 Example2::Example2()
 {
 }
@@ -16,7 +17,9 @@ void Example2::init()
 void Example2::Render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	Ejercicio1();
+	//Ejercicio1();
+	Ejercicio2();
+
 	glFlush();
 
 }
@@ -122,6 +125,154 @@ void Example2::DrawCube(float distance)
 
 }
 
+void Example2::DrawCube(int distance)
+{
+	glLineWidth(10.0f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glBegin(GL_TRIANGLES);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(-distance, distance, distance);
+
+
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+
+
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(-distance, distance, -distance);
+	glVertex3f(-distance, -distance, -distance);
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(-distance, -distance, -distance);
+
+
+
+	glVertex3f(-distance, -distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+
+
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+	glVertex3f(-distance, -distance, -distance);
+
+	glEnd();
+
+}
+
+void Example2::DrawSphere(int radius)
+{
+	glColor3f(1.0f, 1.0f, 0.0f);
+	glutSolidSphere(radius, 32, 32);	
+}
+
+void Example2::DrawPyramid(float distance)
+{
+	float h = distance;
+	float d = distance / 2.0;
+
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glBegin(GL_TRIANGLES);
+
+	glVertex3f(0, h, 0);
+	glVertex3f(-d, 0, d);
+	glVertex3f(d, 0, d);
+
+	glVertex3f(0, h, 0);
+	glVertex3f(d, 0, d);
+	glVertex3f(d, 0, -d);
+
+
+	glVertex3f(0, h, 0);
+	glVertex3f(d, 0, -d);
+	glVertex3f(-d, 0, -d);
+
+	glVertex3f(0, h, 0);
+	glVertex3f(-d, 0, -d);
+	glVertex3f(-d, 0, d);
+
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(-d, 0, d);
+	glVertex3f(d, 0, d);
+	glVertex3f(d, 0, -d);
+	glVertex3f(-d, 0, -d);
+	glEnd();
+
+}
+
+void Example2::DrawRectangle(int base, int height)
+{
+	glBegin(GL_QUADS);
+	glColor3f(0.0f, 0.0f, 1.0f); 
+	glVertex3f(-base, -height, 0.0f); 
+	glVertex3f(base, -height, 0.0f); 
+	glVertex3f(base, height, 0.0f); 
+	glVertex3f(-base, height, 0.0f); 
+	glEnd();
+
+}
+
+void Example2::DrawSquare(int distance)
+{
+	glBegin(GL_QUADS);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(distance, -distance, 0.0f);
+	glVertex3f(distance, distance, 0.0f);
+	glVertex3f(-distance, distance, 0.0f);
+	glVertex3f(-distance, -distance, 0.0f);
+	glEnd();
+
+
+}
+
+void Example2::Circle(float radius, int segments)
+{
+	glBegin(GL_TRIANGLE_FAN);
+	glColor3f(1.0f, 0.0f, 0.0f); 
+	glVertex2f(0.0f, 0.0f); 
+	const double PI = 3.14159265358979323846;
+	for (int i = 0; i <= segments; i++) {
+		float angle = 2.0f * PI * i / segments;
+		float x = radius * cos(angle);
+		float y = radius * sin(angle);
+		glVertex2f(x, y);
+	}
+	
+	glEnd();
+}
+
 
 
 
@@ -201,6 +352,7 @@ void Example2::DrawAxisXYZ() {
 
 void Example2::Ejercicio2()
 {
+
 }
 
 void Example2::Ejercicio3()
