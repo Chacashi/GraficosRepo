@@ -1,14 +1,16 @@
 #pragma once
 #include <string>
+#include "Vector3D.h"
 using namespace std;
 class Figura
 {
-protected:
-	string color;
-	int grosorBorde;
-	int colorA;
+	
 
 public:
-	virtual void Dibujar();
+	Vector3D posicion;
+	Vector3D escala;
+	Vector3D rotacion;
+
+	virtual void Dibujar() = 0;
 };
 

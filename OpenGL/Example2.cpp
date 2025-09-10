@@ -1,7 +1,7 @@
 #include "Example2.h"
+#include "Cuadrado.h"
 #include "IncludeGL.h"
 #include <cmath>
-#include <numbers>
 Example2::Example2()
 {
 }
@@ -18,7 +18,8 @@ void Example2::Render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//Ejercicio1();
-	Ejercicio2();
+	//Ejercicio2();
+	Ejercicio5();
 
 	glFlush();
 
@@ -51,7 +52,7 @@ void Example2::DrawPoint() {
 
 }
 
-void Example2::DrawCube(float distance)
+void Example2::DrawCubeTransformade(float distance)
 {
 	glPushMatrix();
 	glTranslatef(5.0f, 0.0f, 0.0f);
@@ -125,7 +126,7 @@ void Example2::DrawCube(float distance)
 
 }
 
-void Example2::DrawCube(int distance)
+void Example2::DrawCube(float distance)
 {
 	glLineWidth(10.0f);
 	glColor3f(1.0f, 0.0f, 0.0f);
@@ -232,7 +233,7 @@ void Example2::DrawPyramid(float distance)
 
 }
 
-void Example2::DrawRectangle(int base, int height)
+void Example2::DrawRectangle(float base, float height)
 {
 	glBegin(GL_QUADS);
 	glColor3f(0.0f, 0.0f, 1.0f); 
@@ -355,8 +356,13 @@ void Example2::Ejercicio2()
 
 }
 
-void Example2::Ejercicio3()
+void Example2::Ejercicio5()
 {
+	Cuadrado cuadrado(5);
+
+	cuadrado.Dibujar();
+
+
 }
 
 

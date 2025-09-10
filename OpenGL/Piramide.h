@@ -5,7 +5,7 @@ class Piramide :
     public Figura3D
 {
 private:
-    Triangulo tri;
+    //Triangulo tri;
 public:
     int altura;
 };
