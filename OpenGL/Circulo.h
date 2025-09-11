@@ -3,9 +3,16 @@
 class Circulo :
     public Figura2D
 {
-private:
-	int radio;
 public:
-	int cambiarTamanio();
+	int radio;
+	Circulo(int radio) {
+		this->radio = radio;
+		this->posicion = Vector3D(0, 0, 0);
+		this->escala = Vector3D(1, 1, 1);
+		this->rotacion = Vector3D(0, 0, 0);
+	}
+	void Dibujar() override;
+
+
 };
 

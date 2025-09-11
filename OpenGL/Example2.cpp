@@ -1,5 +1,7 @@
 #include "Example2.h"
 #include "Cuadrado.h"
+#include "Triangulo.h"
+#include "Circulo.h"
 #include "IncludeGL.h"
 #include <cmath>
 Example2::Example2()
@@ -30,7 +32,7 @@ void Example2::Render()
 void Example2::Ejercicio1()
 {
 	
-	DrawCube(7.0f);
+	DrawCube(5);
 
 }
 
@@ -353,14 +355,27 @@ void Example2::DrawAxisXYZ() {
 
 void Example2::Ejercicio2()
 {
-
+	DrawSquare(5);
 }
 
 void Example2::Ejercicio5()
 {
-	Cuadrado cuadrado(5);
+	glPushMatrix();
+	glTranslatef(10.0f, 0.0f, 0.f);
 
+	Cuadrado cuadrado(5);
 	cuadrado.Dibujar();
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(-5.0f, 0.0f, 0.f);
+	Triangulo triangulo(5);
+	triangulo.Dibujar();
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0f, 5.0f, 0.f);
+	Circulo circulo(5);
+	circulo.Dibujar();
+	glPopMatrix();
 
 
 }
