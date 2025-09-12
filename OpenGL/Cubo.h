@@ -1,10 +1,16 @@
 #pragma once
 #include "Figura3D.h"
-#include "Cuadrado.h"
 class Cubo :
     public Figura3D
 {
-private:
-    Cuadrado cuad;
+public:
+
+	int lado;
+	Cubo(int lado) {
+		this->lado = lado;
+		transform = Transform();
+	}
+
+	void Dibujar() override;
 };
 

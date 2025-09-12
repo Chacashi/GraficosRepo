@@ -34,6 +34,27 @@
     <Filter Include="Archivos de encabezado\Vector">
       <UniqueIdentifier>{d18555cc-3f86-4173-a365-8b36acfbfb42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de origen\Vector">
+      <UniqueIdentifier>{21c41779-a67c-402b-a357-e3bf20d42f42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Trush">
+      <UniqueIdentifier>{792fb508-2bd8-4fb5-9682-d06939e0ed02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Trush">
+      <UniqueIdentifier>{f380983b-0d8f-4f4b-8938-8b718ad402f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Camara">
+      <UniqueIdentifier>{79966704-160f-46b7-aa42-b37a259d6032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Camara">
+      <UniqueIdentifier>{40851f6e-c63a-48d7-a60d-3e709896f888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\GameObject">
+      <UniqueIdentifier>{8d3ec367-ff30-444d-872c-475d947fa03f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\GameObject">
+      <UniqueIdentifier>{d003294c-1bd7-4320-988a-c291cf9ef657}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -44,12 +65,6 @@
     </ClCompile>
     <ClCompile Include="Example1.cpp">
       <Filter>Archivos de origen\Example</Filter>
-    </ClCompile>
-    <ClCompile Include="Punto3D.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Poligono.cpp">
-      <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Circulo.cpp">
       <Filter>Archivos de origen\Figuras</Filter>
@@ -81,20 +96,47 @@
     <ClCompile Include="Example2.cpp">
       <Filter>Archivos de origen\Example</Filter>
     </ClCompile>
-    <ClCompile Include="Rectangulo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3D.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Transform.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>Archivos de origen\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Poligono.cpp">
+      <Filter>Archivos de origen\Trush</Filter>
+    </ClCompile>
+    <ClCompile Include="Punto3D.cpp">
+      <Filter>Archivos de origen\Trush</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangulo.cpp">
+      <Filter>Archivos de origen\Figuras</Filter>
+    </ClCompile>
+    <ClCompile Include="Example3.cpp">
+      <Filter>Archivos de origen\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="Camara.cpp">
+      <Filter>Archivos de origen\Camara</Filter>
+    </ClCompile>
+    <ClCompile Include="CamaraFPS.cpp">
+      <Filter>Archivos de origen\Camara</Filter>
+    </ClCompile>
+    <ClCompile Include="CamaraOrb.cpp">
+      <Filter>Archivos de origen\Camara</Filter>
+    </ClCompile>
+    <ClCompile Include="CamaraSwitch.cpp">
+      <Filter>Archivos de origen\Camara</Filter>
+    </ClCompile>
+    <ClCompile Include="CamaraTPS.cpp">
+      <Filter>Archivos de origen\Camara</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Archivos de origen\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Archivos de origen\GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Example.h">
       <Filter>Archivos de encabezado\Example</Filter>
     </ClInclude>
@@ -103,12 +145,6 @@
     </ClInclude>
     <ClInclude Include="IncludeGL.h">
       <Filter>Archivos de encabezado\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Punto3D.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Poligono.h">
-      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Circulo.h">
       <Filter>Archivos de encabezado\Figuras</Filter>
@@ -148,6 +184,39 @@
     </ClInclude>
     <ClInclude Include="Transform.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Example3.h">
+      <Filter>Archivos de encabezado\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Archivos de encabezado\Trush</Filter>
+    </ClInclude>
+    <ClInclude Include="Punto3D.h">
+      <Filter>Archivos de encabezado\Trush</Filter>
+    </ClInclude>
+    <ClInclude Include="Poligono.h">
+      <Filter>Archivos de encabezado\Trush</Filter>
+    </ClInclude>
+    <ClInclude Include="Camara.h">
+      <Filter>Archivos de encabezado\Camara</Filter>
+    </ClInclude>
+    <ClInclude Include="CamaraFPS.h">
+      <Filter>Archivos de encabezado\Camara</Filter>
+    </ClInclude>
+    <ClInclude Include="CamaraTPS.h">
+      <Filter>Archivos de encabezado\Camara</Filter>
+    </ClInclude>
+    <ClInclude Include="CamaraOrb.h">
+      <Filter>Archivos de encabezado\Camara</Filter>
+    </ClInclude>
+    <ClInclude Include="CamaraSwitch.h">
+      <Filter>Archivos de encabezado\Camara</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Archivos de encabezado\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Archivos de encabezado\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

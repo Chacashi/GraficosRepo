@@ -4,7 +4,7 @@
 #include "IncludeGL.h"
 #include "Example.h"
 #include "Example1.h"
-#include "Example2.h"
+#include "Example3.h"
 #include <iostream>
 using namespace std;
 Example* _Example;
@@ -13,11 +13,11 @@ int figuraSeleccionada = 0;
 
 void Render()
 {
-	((Example2*)_Example)->Render();
+	((Example3*)_Example)->Render();
 }
 void KeyboardFunc(unsigned char key, int X, int Y )
 {
-	((Example2*)_Example)->KeyboardFunc(key,  X,  Y);
+	((Example3*)_Example)->KeyboardFunc(key,  X,  Y);
 	glutPostRedisplay(); 
 }
 void reSize(GLsizei width, GLsizei height) {  // GLsizei for non-negative integer
@@ -37,14 +37,14 @@ void reSize(GLsizei width, GLsizei height) {  // GLsizei for non-negative intege
 
 void Idle()
 {
-	((Example2*)_Example)->Idle();
+	((Example3*)_Example)->Idle();
 }
 
 
 void init(void)
 {
-	_Example = new Example2();
-	((Example2*)_Example)->init();
+	_Example = new Example3();
+	((Example3*)_Example)->init();
 }
 int main(int argc, char** argv)
 {

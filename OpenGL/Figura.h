@@ -1,16 +1,11 @@
 #pragma once
-#include <string>
-#include "Vector3D.h"
+
+#include "Transform.h"
 using namespace std;
 class Figura
 {
-	
-
 public:
-	Vector3D posicion;
-	Vector3D escala;
-	Vector3D rotacion;
-
+	Transform transform;
 	virtual void Dibujar() = 0;
 };
 

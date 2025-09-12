@@ -8,9 +8,6 @@ public:
 	int lado;
 	Cuadrado(int lado) {
 		this->lado = lado;
-		this->posicion = Vector3D(0, 0, 0);
-		this->escala = Vector3D(1, 1, 1);
-		this->rotacion = Vector3D(0, 0, 0);
 	}
 	int cambiarTamanio();
 	void Dibujar() override;
