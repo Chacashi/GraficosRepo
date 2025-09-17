@@ -1,5 +1,4 @@
 #pragma once
-#include "Figura.h"
 #include "Vector3D.h"
 class Transform
 {
@@ -13,9 +12,10 @@ public:
 		rotacion = Vector3D(0, 0, 0);
 	}
 
-	void Translate(Figura& figura, Vector3D);
-	void Rotate(Figura& figura, Vector3D eje, float angulo);
-	void Scale(Figura& figura, Vector3D escalar);
+	void Translate( Vector3D desplazamiento);
+	void Rotate(Vector3D eje, float angulo);
+	void Scale(Vector3D escalar);
 
+	void Apply();
 };
 

@@ -47,12 +47,37 @@ void Example3::Ejercicio1()
 
 void Example3::Ejercicio2()
 {
-
+	DibujarFiguras();
 }
 
 void Example3::DibujarFiguras()
 {
-	Cuadrado 
+	DrawAxisXYZ();
+	DrawGridsXZ();
+
+	Cubo cubo(5);
+	glPushMatrix();
+	cubo.transform.Translate(Vector3D(-20, 0, 0));
+	cubo.transform.Apply();   
+	cubo.Dibujar();
+	glPopMatrix();
+
+	Piramide piramide(5);
+	glPushMatrix();
+	piramide.transform.Translate(Vector3D(0,0, 50));
+	piramide.transform.Apply();
+	piramide.Dibujar();
+	glPopMatrix();
+
+	Esfera esfera(5);
+	glPushMatrix();
+	esfera.transform.Translate(Vector3D(15, 0, 15));
+	esfera.transform.Apply(); 
+	esfera.Dibujar();
+	glPopMatrix();
+
+
+
 }
 
 void Example3::DrawAxisXYZ()

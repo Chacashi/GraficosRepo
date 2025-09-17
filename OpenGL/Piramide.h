@@ -4,9 +4,14 @@
 class Piramide :
     public Figura3D
 {
-private:
-    //Triangulo tri;
 public:
     int altura;
+
+    Piramide(int altura) {
+		this->altura = altura;
+		transform = Transform();
+    }
+
+	void Dibujar() override;
 };
 

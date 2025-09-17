@@ -10,9 +10,9 @@ public:
 		escala = Vector3D(1, 1, 1);
 	}
 	Character(Figura& figura) {
-		posicion = figura.posicion;
-		rotacion = figura.rotacion;
-		escala = figura.escala;
+		posicion = figura.transform.posicion;
+		rotacion = figura.transform.rotacion;
+		escala = figura.transform.escala;
 	}
 
 };

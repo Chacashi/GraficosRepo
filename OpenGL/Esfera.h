@@ -3,7 +3,14 @@
 class Esfera :
     public Figura3D
 {
-private:
+public:
     int radio;
+
+    Esfera(int radio) {
+        this->radio = radio;
+        transform = Transform();
+	}
+
+	void Dibujar() override;
 };
 

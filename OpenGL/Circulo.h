@@ -7,9 +7,7 @@ public:
 	int radio;
 	Circulo(int radio) {
 		this->radio = radio;
-		this->posicion = Vector3D(0, 0, 0);
-		this->escala = Vector3D(1, 1, 1);
-		this->rotacion = Vector3D(0, 0, 0);
+		transform = Transform();
 	}
 	void Dibujar() override;
 
