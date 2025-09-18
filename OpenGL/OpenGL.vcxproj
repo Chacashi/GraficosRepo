@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Usuario\Desktop\GraficosRepo\freeglut\include;C:\Users\Usuario\Desktop\GraficosRepo\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\USUARIO\Desktop\OpenGL\freeglut\include;C:\Users\USUARIO\Desktop\OpenGL\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Usuario\Desktop\GraficosRepo\glew-2.1.0\lib\Release\Win32;C:\Users\Usuario\Desktop\GraficosRepo\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\USUARIO\Desktop\OpenGL\glew-2.1.0\lib\Release\Win32;C:\Users\USUARIO\Desktop\OpenGL\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -152,8 +152,10 @@
     <ClCompile Include="CamaraTPS.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Circulo.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Cuadrado.cpp" />
     <ClCompile Include="Cubo.cpp" />
+    <ClCompile Include="DirectionLight.cpp" />
     <ClCompile Include="Esfera.cpp" />
     <ClCompile Include="Example.cpp" />
     <ClCompile Include="Example1.cpp" />
@@ -163,11 +165,14 @@
     <ClCompile Include="Figura2D.cpp" />
     <ClCompile Include="Figura3D.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="OpenGL.cpp" />
     <ClCompile Include="Piramide.cpp" />
+    <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="Poligono.cpp" />
     <ClCompile Include="Punto3D.cpp" />
     <ClCompile Include="Rectangulo.cpp" />
+    <ClCompile Include="SpotLigth.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="Triangulo.cpp" />
     <ClCompile Include="Vector3D.cpp" />
@@ -180,8 +185,10 @@
     <ClInclude Include="CamaraTPS.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Circulo.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="Cuadrado.h" />
     <ClInclude Include="Cubo.h" />
+    <ClInclude Include="DirectionLight.h" />
     <ClInclude Include="Esfera.h" />
     <ClInclude Include="Example.h" />
     <ClInclude Include="Example1.h" />
@@ -192,11 +199,14 @@
     <ClInclude Include="Figura3D.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="IncludeGL.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Piramide.h" />
+    <ClInclude Include="PointLight.h" />
     <ClInclude Include="Poligono.h" />
     <ClInclude Include="Punto3D.h" />
     <ClInclude Include="Rectangulo.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SpotLigth.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Triangulo.h" />
     <ClInclude Include="Vector3D.h" />
