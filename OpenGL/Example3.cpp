@@ -5,7 +5,7 @@
 #include "Piramide.h"
 #include "CamaraFPS.h"
 
-Camara* cam;
+//Camara* cam;
 Example3::Example3()
 {
 }
@@ -17,7 +17,7 @@ void Example3::init()
 	glEnable(GL_DEPTH_TEST);
 
 	// inicializar cámara FPS en el plano XZ
-	cam = new CamaraFPS(0.0f, 10.0f, 2.0f);
+	//cam = new CamaraFPS(0.0f, 10.0f, 2.0f);
 
 	glMatrixMode(GL_MODELVIEW);
 
@@ -26,10 +26,10 @@ void Example3::Render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	if (cam) cam->ApplyView();
+	//if (cam) cam->ApplyView();
 	//Ejercicio1();
 	//Ejercicio2();
-	Ejercicio3();
+	//Ejercicio3();
 	glutSwapBuffers();
 
 }
@@ -37,8 +37,8 @@ void Example3::Render()
 
 void Example3::KeyboardFunc(unsigned char key, int X, int Y)
 {
-	if (cam) cam->Keyboard(key);
-	glutPostRedisplay();  // pedir redibujar
+	//if (cam) cam->Keyboard(key);
+	glutPostRedisplay();  
 }
 
 

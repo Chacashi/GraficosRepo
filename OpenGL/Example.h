@@ -12,5 +12,7 @@ public:
 
 	void DrawAxis(float distance);
 	void DrawGrids();
+	void DrawCube(float distance);
+	void DrawSphere(float radius);
 };
 

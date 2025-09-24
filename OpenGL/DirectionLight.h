@@ -4,10 +4,11 @@
 class DirectionLight :
     public Light
 {
-
+    Vector3D direction{ 0,-1,0 };
 public:
-    Vector3D direction;
-    DirectionLight(GLenum lightId, const Vector3D& dir = Vector3D(0.0f, -1.0f, 0.0f));
+    DirectionLight(GLenum lightd);
+	void setDirection(const Vector3D& dir);
+	Vector3D getDirection() const;
 
     void apply() override;
 

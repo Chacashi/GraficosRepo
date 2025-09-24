@@ -41,4 +41,82 @@ void Example::DrawGrids()
 	glEnd();
 	 
 }
+void Example::DrawCube(float distance)
+{
+	glLineWidth(10.0f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glPushMatrix();
+	glTranslatef(5.0f, 2.0f, 0.0f);
+	glBegin(GL_TRIANGLES);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(-distance, distance, distance);
+
+
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+
+
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(-distance, distance, -distance);
+	glVertex3f(-distance, -distance, -distance);
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(-distance, -distance, -distance);
+
+
+
+	glVertex3f(-distance, -distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+	glVertex3f(distance, -distance, -distance);
+
+
+	glVertex3f(distance, distance, distance);
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+
+	glVertex3f(-distance, distance, distance);
+	glVertex3f(distance, distance, -distance);
+	glVertex3f(-distance, distance, -distance);
+
+
+	glVertex3f(distance, -distance, distance);
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+
+	glVertex3f(-distance, -distance, distance);
+	glVertex3f(distance, -distance, -distance);
+	glVertex3f(-distance, -distance, -distance);
+
+	glEnd();
+	glPopMatrix();
+
+
+
+
+}
+void Example::DrawSphere(float radius)
+{
+	glColor3f(1.0f, 1.0f, 0.0f);
+	glPushMatrix();
+	glTranslatef(5.0f, 2.0f, 0.0f);
+	glutSolidSphere(radius, 32, 32);
+	glPopMatrix();
+}
 

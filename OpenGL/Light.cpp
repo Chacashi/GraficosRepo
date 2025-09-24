@@ -6,6 +6,10 @@ void Light::sendColor4f(GLenum pname, GLenum lightId, const Color& c)
 	glLightfv(lightId, pname, v);
 }
 
+Light::Light()
+{
+}
+
 void Light::enable()
 {
 	enabled = true; glEnable(glld);
@@ -15,7 +19,13 @@ void Light::disable()
 {
 	enabled = false; glDisable(glld);
 }
-
+void Light::setEnabled(bool value)
+{
+	if (value)
+		enable();
+	else
+		disable();
+}
 void Light::setAmbient(const Color& c)
 {
 	ambient = c;

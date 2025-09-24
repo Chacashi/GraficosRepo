@@ -5,10 +5,10 @@ class PointLight :
     public Light
 {
 public:
-	Vector3D position;
-	float constantAtt;
-	float linearAtt;
-	float quadraticAtt;
+	Vector3D position{ 0,0,0 };
+	float constantAtt = 1.0f;
+	float linearAtt = 0.0f;
+	float quadraticAtt = 0.0f;
 
 	PointLight(GLenum lightId);
 

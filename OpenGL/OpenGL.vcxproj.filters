@@ -156,6 +156,9 @@
     <ClCompile Include="DirectionLight.cpp">
       <Filter>Archivos de origen\Luces</Filter>
     </ClCompile>
+    <ClCompile Include="Example4.cpp">
+      <Filter>Archivos de origen\Example</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example.h">
@@ -253,6 +256,9 @@
     </ClInclude>
     <ClInclude Include="Color.h">
       <Filter>Archivos de encabezado\Luces</Filter>
+    </ClInclude>
+    <ClInclude Include="Example4.h">
+      <Filter>Archivos de encabezado\Example</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

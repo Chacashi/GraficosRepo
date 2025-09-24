@@ -1,10 +1,14 @@
 #include "PointLight.h"
+#include "SpotLigth.h"
 
 
 
-PointLight::PointLight(GLenum lightId) : Light(lightId), constantAtt(1.0f), linearAtt(0.0f), quadraticAtt(0.0f) {}
+PointLight::PointLight(GLenum lightId) : Light(lightId, Color(0.2f, 0.2f, 0.2f, 1.0f),
+    Color(0.8f, 0.8f, 0.8f, 1.0f),
+    Color(1.0f, 1.0f, 1.0f, 1.0f)) {}
 
-void PointLight::setPosition(const Vector3D& p) 
+
+void PointLight::setPosition(const Vector3D& p)
 { 
 	position = p; 
 }

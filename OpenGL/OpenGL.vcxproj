@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\USUARIO\Desktop\OpenGL\freeglut\include;C:\Users\USUARIO\Desktop\OpenGL\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Usuario\Desktop\GraficosRepo\freeglut\include;C:\Users\Usuario\Desktop\GraficosRepo\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\USUARIO\Desktop\OpenGL\glew-2.1.0\lib\Release\Win32;C:\Users\USUARIO\Desktop\OpenGL\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Usuario\Desktop\GraficosRepo\glew-2.1.0\lib\Release\Win32;C:\Users\Usuario\Desktop\GraficosRepo\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -161,6 +161,7 @@
     <ClCompile Include="Example1.cpp" />
     <ClCompile Include="Example2.cpp" />
     <ClCompile Include="Example3.cpp" />
+    <ClCompile Include="Example4.cpp" />
     <ClCompile Include="Figura.cpp" />
     <ClCompile Include="Figura2D.cpp" />
     <ClCompile Include="Figura3D.cpp" />
@@ -194,6 +195,7 @@
     <ClInclude Include="Example1.h" />
     <ClInclude Include="Example2.h" />
     <ClInclude Include="Example3.h" />
+    <ClInclude Include="Example4.h" />
     <ClInclude Include="Figura.h" />
     <ClInclude Include="Figura2D.h" />
     <ClInclude Include="Figura3D.h" />

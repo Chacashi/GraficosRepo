@@ -1,7 +1,8 @@
 #pragma once
 #include "IncludeGL.h"
 #include "Color.h"
-
+template <typename T>
+static inline T clampv(T v, T lo, T hi) { return (v < lo) ? lo : (v > hi ? hi : v); }
 class Light
 {
 public:
@@ -11,7 +12,7 @@ public:
 	Color diffuse;
 	Color specular;
 
-
+	Light();
 	Light(int lightID,
 		const Color& amb = Color(0.2f, 0.2f, 0.2f, 1.0f),
 		const Color& diff = Color(0.5f, 0.5f, 0.5f, 1.0f),
@@ -27,7 +28,7 @@ public:
 
 	virtual void enable();
 	virtual void disable();
-
+	void setEnabled(bool value);
 	void setAmbient(const Color& c);
 	void setDiffuse(const Color& c);
 	void setSpecular(const Color& c);
