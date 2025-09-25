@@ -8,7 +8,7 @@ Camara* cam;
 Example4::Example4()
 {
 
-	newLight = new SpotLigth(GL_LIGHT0);
+	newLight = new DirectionLight(GL_LIGHT0);
 
 }
 void Example4::init()
@@ -29,14 +29,14 @@ void Example4::init()
 
 
 	//((PointLight*)newLight)->setPosition(Vector3D(0.0f, 3.0f, 0.0f));	
-	//((DirectionLight*)newLight)->setDirection(Vector3D(0.0f, 0.0f, -1.0f));
-	((SpotLigth*)newLight)->setPosition(Vector3D(0.0f, 20.0f, 0.0f));
+	((DirectionLight*)newLight)->setDirection(Vector3D(0.0f, 0.0f, -1.0f));
+	/*((SpotLigth*)newLight)->setPosition(Vector3D(0.0f, 20.0f, 0.0f));
 	((SpotLigth*)newLight)->setCutoffAngle(30.0f);
 	((SpotLigth*)newLight)->setDirection(Vector3D(0.0f, -1.0f, 0.0f));
 	((SpotLigth*)newLight)->setExponent(0.0f);
 	((SpotLigth*)newLight)->setDiffuse(Color(1.0f, 1.0f, 1.0f, 1.0f));
 	((SpotLigth*)newLight)->setSpecular(Color(1.0f, 1.0f, 1.0f, 1.0f));
-	((SpotLigth*)newLight)->setAmbient(Color(0.1f, 0.1f, 0.1f, 1.0f));
+	((SpotLigth*)newLight)->setAmbient(Color(0.1f, 0.1f, 0.1f, 1.0f));*/
 }
 void Example4::Render()
 {
@@ -45,7 +45,7 @@ void Example4::Render()
 	Vector3D min = Vector3D(-10.0f, 0.0f, -10.0f);
 	Vector3D max = Vector3D(10.0f, 0.0f, 10.0f);
 	if (cam) cam->ApplyView();
-	((SpotLigth*)newLight)->apply();
+	((DirectionLight*)newLight)->apply();
 	//Example::DrawAxis(10.0f);
 	DrawQuadMinMax(min, max);
 	DrawTeapot();

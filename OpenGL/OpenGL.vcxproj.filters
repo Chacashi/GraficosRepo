@@ -61,6 +61,12 @@
     <Filter Include="Archivos de encabezado\Luces">
       <UniqueIdentifier>{f7c85210-eb60-48e8-ab81-df0bac595009}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Textura">
+      <UniqueIdentifier>{238e6270-22f0-478a-aba7-1d210c7caf22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Textura">
+      <UniqueIdentifier>{bebf22b6-94e5-4c99-9887-8b595ef74fa5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -159,6 +165,9 @@
     <ClCompile Include="Example4.cpp">
       <Filter>Archivos de origen\Example</Filter>
     </ClCompile>
+    <ClCompile Include="Example5.cpp">
+      <Filter>Archivos de origen\Example</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example.h">
@@ -205,9 +214,6 @@
     </ClInclude>
     <ClInclude Include="Rectangulo.h">
       <Filter>Archivos de encabezado\Figuras</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Example3.h">
       <Filter>Archivos de encabezado\Example</Filter>
@@ -259,6 +265,12 @@
     </ClInclude>
     <ClInclude Include="Example4.h">
       <Filter>Archivos de encabezado\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="Example5.h">
+      <Filter>Archivos de encabezado\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
