@@ -3,6 +3,7 @@
 
 void Circulo::Dibujar()
 {
+	AplicarTextura();
 	glBegin(GL_TRIANGLE_FAN);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex2f(0.0f, 0.0f);
@@ -15,4 +16,6 @@ void Circulo::Dibujar()
 	}
 
 	glEnd();
+
+	DesactivarTextura();
 }

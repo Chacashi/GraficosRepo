@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\USUARIO\Desktop\OpenGL\OpenGL\freeglut\include;C:\Users\USUARIO\Desktop\OpenGL\OpenGL\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Usuario\Desktop\GraficosRepo\OpenGL\freeglut\include;C:\Users\Usuario\Desktop\GraficosRepo\OpenGL\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\USUARIO\Desktop\OpenGL\OpenGL\glew-2.1.0\lib\Release\Win32;C:\Users\USUARIO\Desktop\OpenGL\OpenGL\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Usuario\Desktop\GraficosRepo\OpenGL\glew-2.1.0\lib\Release\Win32;C:\Users\Usuario\Desktop\GraficosRepo\OpenGL\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BMPTextureLoader.cpp" />
     <ClCompile Include="Camara.cpp" />
     <ClCompile Include="CamaraFPS.cpp" />
     <ClCompile Include="CamaraOrb.cpp" />
@@ -172,14 +173,18 @@
     <ClCompile Include="Piramide.cpp" />
     <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="Poligono.cpp" />
+    <ClCompile Include="process_image.cpp" />
     <ClCompile Include="Punto3D.cpp" />
     <ClCompile Include="Rectangulo.cpp" />
     <ClCompile Include="SpotLigth.cpp" />
+    <ClCompile Include="TextureLoader.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="Triangulo.cpp" />
     <ClCompile Include="Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BMPTextureLoader.h" />
     <ClInclude Include="Camara.h" />
     <ClInclude Include="CamaraFPS.h" />
     <ClInclude Include="CamaraOrb.h" />
@@ -207,10 +212,13 @@
     <ClInclude Include="Piramide.h" />
     <ClInclude Include="PointLight.h" />
     <ClInclude Include="Poligono.h" />
+    <ClInclude Include="process_image.h" />
     <ClInclude Include="Punto3D.h" />
     <ClInclude Include="Rectangulo.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SpotLigth.h" />
+    <ClInclude Include="TextureLoader.h" />
+    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Triangulo.h" />
     <ClInclude Include="Vector3D.h" />

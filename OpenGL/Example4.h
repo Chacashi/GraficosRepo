@@ -2,11 +2,13 @@
 #include "Example.h"
 #include "Light.h"
 #include "Vector3D.h"
+#include "Figura.h"
 class Example4 :
 	public Example
 {
 	Light* newLight;
 	float torusYawDeg = 0.0f;
+
 
 public:
 	Example4();

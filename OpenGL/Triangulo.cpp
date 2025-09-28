@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 void Triangulo::Dibujar()
 {
+	AplicarTextura();
 	glBegin(GL_TRIANGLES);
 
 	glVertex3f(0, lado, 0);
@@ -9,4 +10,5 @@ void Triangulo::Dibujar()
 	glVertex3f(lado, 0, lado);
 
 	glEnd();
+	DesactivarTextura();
 }

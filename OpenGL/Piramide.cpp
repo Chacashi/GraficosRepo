@@ -3,6 +3,7 @@
 
 void Piramide::Dibujar()
 {
+	AplicarTextura();
 	float h = altura;
 	float d = altura / 2.0;
 
@@ -34,4 +35,6 @@ void Piramide::Dibujar()
 	glVertex3f(d, 0, -d);
 	glVertex3f(-d, 0, -d);
 	glEnd();
+
+	DesactivarTextura();
 }

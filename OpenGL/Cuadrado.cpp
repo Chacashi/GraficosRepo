@@ -8,6 +8,7 @@ int Cuadrado::cambiarTamanio()
 
 void Cuadrado::Dibujar()
 {
+	AplicarTextura();
 	glBegin(GL_QUADS);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex3f(lado, -lado, 0.0f);
@@ -15,6 +16,6 @@ void Cuadrado::Dibujar()
 	glVertex3f(-lado, lado, 0.0f);
 	glVertex3f(-lado, -lado, 0.0f);
 	glEnd();
-
+	DesactivarTextura();
 
 }
