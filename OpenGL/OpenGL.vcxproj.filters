@@ -180,6 +180,9 @@
     <ClCompile Include="TextureManager.cpp">
       <Filter>Archivos de origen\Textura</Filter>
     </ClCompile>
+    <ClCompile Include="Example6.cpp">
+      <Filter>Archivos de origen\Example</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example.h">
@@ -295,6 +298,9 @@
     </ClInclude>
     <ClInclude Include="TextureManager.h">
       <Filter>Archivos de encabezado\Textura</Filter>
+    </ClInclude>
+    <ClInclude Include="Example6.h">
+      <Filter>Archivos de encabezado\Example</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

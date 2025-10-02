@@ -7,7 +7,7 @@ Example::Example()
 }
 
 void Example::DrawAxis(float distance)
-{
+{ 
 	glLineWidth(2.0f);
 	glBegin(GL_LINES);
 

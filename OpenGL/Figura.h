@@ -9,9 +9,11 @@ using namespace std;
 class Figura
 {
 public:
+    //GLuint displayListId;
 	Transform transform;
-	
     GLuint textureID;
+  /*  Figura() : displayListId(0) {}
+    virtual void CompilarDisplayList() = 0;*/
 
     void SetTexture(GLuint tex) {
         textureID = tex;
