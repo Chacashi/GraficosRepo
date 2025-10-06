@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include "IncludeGL.h"
 #include "Example.h"
-#include "Example6.h"
+#include "Example5.h"
 #include <iostream>
 using namespace std;
 Example* _Example;
@@ -12,11 +12,11 @@ int figuraSeleccionada = 0;
 
 void Render()
 {
-	((Example6*)_Example)->Render();
+	((Example5*)_Example)->Render();
 }
 void KeyboardFunc(unsigned char key, int X, int Y )
 {
-	((Example6*)_Example)->KeyboardFunc(key,  X,  Y);
+	((Example5*)_Example)->KeyboardFunc(key,  X,  Y);
 	glutPostRedisplay(); 
 }
 void reSize(GLsizei width, GLsizei height) {  // GLsizei for non-negative integer
@@ -36,14 +36,14 @@ void reSize(GLsizei width, GLsizei height) {  // GLsizei for non-negative intege
 
 void Idle()
 {
-	((Example6*)_Example)->Idle();
+	((Example5*)_Example)->Idle();
 }
 
 
 void init(void)
 {
-	_Example = new Example6();
-	((Example6*)_Example)->init();
+	_Example = new Example5();
+	((Example5*)_Example)->init();
 }
 int main(int argc, char** argv)
 {

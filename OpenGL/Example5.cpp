@@ -1,4 +1,4 @@
-#include "Example5.h"
+	#include "Example5.h"
 #include "CamaraFPS.h"
 #include "IncludeGL.h"	
 #include "DirectionLight.h"	
@@ -31,7 +31,7 @@ void Example5::init()
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 	newLight->enable();
-	cam2 = new CamaraFPS(0.0f, 10.0f, 2.0f);
+	cam2 = new CamaraFPS(0.0f, 15.0f, 2.0f);
 
 	glMatrixMode(GL_MODELVIEW);
 
@@ -60,7 +60,7 @@ void Example5::Render()
 	glRotatef(rotX, 1, 0, 0);
 	glRotatef(rotY, 0, 1, 0);
 
-	Ejercicio5();
+	Ejercicio2();
 
 
 
@@ -139,8 +139,9 @@ void Example5::Ejercicio2()
 	glEnable(GL_TEXTURE_GEN_T);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glBindTexture(GL_TEXTURE_2D, texture);
-
+	((Cubo*)shape)->CargarTextura("./Textures/barcos.bmp", texManager);
 	glPushMatrix();
+
 	((Cubo*)shape)->Dibujar();
 	glPopMatrix();
 
