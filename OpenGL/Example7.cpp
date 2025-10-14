@@ -23,7 +23,7 @@ void Example7::Render()
 	//DrawCube(1.0);
 	//DrawCuad(1.0);
 	//DrawSphere(1.0, 20, 20);
-	//DrawPyramid(1.0);
+	DrawPyramid(1.0);
 }
 
 void Example7::KeyboardFunc(unsigned char key, int X, int Y)
@@ -37,34 +37,34 @@ void Example7::Idle()
 void Example7::DrawCubeIndex(float distance)
 {
     GLfloat vertices[][3] = {
-     {-distance, -distance, -distance}, // 0
-     { distance, -distance, -distance}, // 1
-     { distance,  distance, -distance}, // 2
-     {-distance,  distance, -distance}, // 3
-     {-distance, -distance,  distance}, // 4
-     { distance, -distance,  distance}, // 5
-     { distance,  distance,  distance}, // 6
-     {-distance,  distance,  distance}  // 7
+     {-distance, -distance, -distance}, 
+     { distance, -distance, -distance}, 
+     { distance,  distance, -distance}, 
+     {-distance,  distance, -distance}, 
+     {-distance, -distance,  distance}, 
+     { distance, -distance,  distance}, 
+     { distance,  distance,  distance}, 
+     {-distance,  distance,  distance}  
     };
 
     GLfloat colores[][3] = {
-        {1.0, 0.0, 0.0}, // rojo
-        {0.0, 1.0, 0.0}, // verde
-        {0.0, 0.0, 1.0}, // azul
-        {1.0, 1.0, 0.0}, // amarillo
-        {1.0, 0.0, 1.0}, // magenta
-        {0.0, 1.0, 1.0}, // cian
-        {1.0, 1.0, 1.0}, // blanco
-        {0.3, 0.3, 0.3}  // gris
+        {1.0, 0.0, 0.0}, 
+        {0.0, 1.0, 0.0}, 
+        {0.0, 0.0, 1.0}, 
+        {1.0, 1.0, 0.0}, 
+        {1.0, 0.0, 1.0}, 
+        {0.0, 1.0, 1.0}, 
+        {1.0, 1.0, 1.0}, 
+        {0.3, 0.3, 0.3}  
     };
 
     GLubyte indices[] = {
-        0,1,2,3,   // cara trasera
-        4,5,6,7,   // cara frontal
-        0,4,7,3,   // izquierda
-        1,5,6,2,   // derecha
-        3,2,6,7,   // arriba
-        0,1,5,4    // abajo
+        0,1,2,3,   
+        4,5,6,7,   
+        0,4,7,3,   
+        1,5,6,2,  
+        3,2,6,7,   
+        0,1,5,4    
     };
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
@@ -75,7 +75,7 @@ void Example7::DrawCubeIndex(float distance)
     glVertexPointer(3, GL_FLOAT, 0, vertices);
     glColorPointer(3, GL_FLOAT, 0, colores);
 
-    // Dibujar las 6 caras
+ 
     glDrawElements(GL_QUADS, 24, GL_UNSIGNED_BYTE, indices);
 
     glDisableClientState(GL_COLOR_ARRAY);
@@ -87,16 +87,16 @@ void Example7::DrawCubeIndex(float distance)
 void Example7::DrawCuadIndex(float distance)
 {
     GLfloat vertices[][2] = {
-    {-distance, -distance}, // abajo izquierda
-    { distance, -distance}, // abajo derecha
-    { distance,  distance}, // arriba derecha
-    {-distance,  distance}  // arriba izquierda
+    {-distance, -distance}, 
+    { distance, -distance}, 
+    { distance,  distance}, 
+    {-distance,  distance}  
     };
     GLfloat colores[][3] = {
-    {1.0f, 0.0f, 0.0f}, // rojo
-    {0.0f, 1.0f, 0.0f}, // verde
-    {0.0f, 0.0f, 1.0f}, // azul
-    {1.0f, 1.0f, 0.0f}  // amarillo
+    {1.0f, 0.0f, 0.0f}, 
+    {0.0f, 1.0f, 0.0f}, 
+    {0.0f, 0.0f, 1.0f}, 
+    {1.0f, 1.0f, 0.0f}  
     };
 
     GLubyte indices[] = { 0, 1, 2, 3 };
@@ -230,56 +230,56 @@ void Example7::DrawPyramidIndex(float distance)
 void Example7::DrawCube(float distance)
 {
     GLfloat vertices[][3] = {
-        // Frente (Z positivo)
+     
         {-distance, -distance,  distance},
         { distance, -distance,  distance},
         { distance,  distance,  distance},
         {-distance,  distance,  distance},
 
-        // Atrás (Z negativo)
+     
         { distance, -distance, -distance},
         {-distance, -distance, -distance},
         {-distance,  distance, -distance},
         { distance,  distance, -distance},
 
-        // Izquierda (X negativo)
+
         {-distance, -distance, -distance},
         {-distance, -distance,  distance},
         {-distance,  distance,  distance},
         {-distance,  distance, -distance},
 
-        // Derecha (X positivo)
+      
         { distance, -distance,  distance},
         { distance, -distance, -distance},
         { distance,  distance, -distance},
         { distance,  distance,  distance},
 
-        // Arriba (Y positivo)
+     
         {-distance,  distance,  distance},
         { distance,  distance,  distance},
         { distance,  distance, -distance},
         {-distance,  distance, -distance},
 
-        // Abajo (Y negativo)
+   
         {-distance, -distance, -distance},
         { distance, -distance, -distance},
         { distance, -distance,  distance},
         {-distance, -distance,  distance}
     };
 
-    // -------------------- COLORES --------------------
+
     GLfloat colores[][3] = {
-        // Frente
+     
         {1.0f, 0.0f, 0.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 0.0f, 0.0f},
-        // Atrás
+   
         {0.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 0.0f},
-        // Izquierda
+ 
         {0.0f, 0.0f, 1.0f}, {0.0f, 0.0f, 1.0f}, {0.0f, 0.0f, 1.0f}, {0.0f, 0.0f, 1.0f},
-        // Derecha
+      
         {1.0f, 1.0f, 0.0f}, {1.0f, 1.0f, 0.0f}, {1.0f, 1.0f, 0.0f}, {1.0f, 1.0f, 0.0f},
-        // Arriba
+ 
         {1.0f, 0.0f, 1.0f}, {1.0f, 0.0f, 1.0f}, {1.0f, 0.0f, 1.0f}, {1.0f, 0.0f, 1.0f},
-        // Abajo
+    
         {0.0f, 1.0f, 1.0f}, {0.0f, 1.0f, 1.0f}, {0.0f, 1.0f, 1.0f}, {0.0f, 1.0f, 1.0f}
     };
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -291,7 +291,7 @@ void Example7::DrawCube(float distance)
     glVertexPointer(3, GL_FLOAT, 0, vertices);
     glColorPointer(3, GL_FLOAT, 0, colores);
 
-    // Dibujar 6 caras (cada una 4 vértices)
+
     glDrawArrays(GL_QUADS, 0, 24);
 
     glDisableClientState(GL_COLOR_ARRAY);
@@ -303,18 +303,18 @@ void Example7::DrawCube(float distance)
 void Example7::DrawCuad(float distance)
 {
     GLfloat vertices[][2] = {
-    {-distance, -distance}, // abajo izquierda
-    { distance, -distance}, // abajo derecha
-    { distance,  distance}, // arriba derecha
-    {-distance,  distance}  // arriba izquierda
+    {-distance, -distance},
+    { distance, -distance}, 
+    { distance,  distance}, 
+    {-distance,  distance}  
     };
 
-    // -------------------- COLORES --------------------
+
     GLfloat colores[][3] = {
-        {1.0f, 0.0f, 0.0f}, // rojo
-        {0.0f, 1.0f, 0.0f}, // verde
-        {0.0f, 0.0f, 1.0f}, // azul
-        {1.0f, 1.0f, 0.0f}  // amarillo
+        {1.0f, 0.0f, 0.0f}, 
+        {0.0f, 1.0f, 0.0f}, 
+        {0.0f, 0.0f, 1.0f}, 
+        {1.0f, 1.0f, 0.0f}  
     };
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -324,7 +324,7 @@ void Example7::DrawCuad(float distance)
     glVertexPointer(2, GL_FLOAT, 0, vertices);
     glColorPointer(3, GL_FLOAT, 0, colores);
 
-    // Dibujar el cuadrado (4 vértices)
+   
     glDrawArrays(GL_QUADS, 0, 4);
 
     glDisableClientState(GL_COLOR_ARRAY);
@@ -356,7 +356,7 @@ void Example7::DrawSphere(float radius, int slices, int stacks)
             float x = cos(lng);
             float y = sin(lng);
 
-            // primer triángulo de la franja
+           
             vertices[vertexCount][0] = radius * x * zr0;
             vertices[vertexCount][1] = radius * y * zr0;
             vertices[vertexCount][2] = radius * z0;
@@ -383,7 +383,7 @@ void Example7::DrawSphere(float radius, int slices, int stacks)
     glVertexPointer(3, GL_FLOAT, 0, vertices);
     glColorPointer(3, GL_FLOAT, 0, colors);
 
-    // Dibujamos la esfera con triángulos en tiras (por franjas)
+    
     glDrawArrays(GL_TRIANGLE_STRIP, 0, vertexCount);
 
     glDisableClientState(GL_COLOR_ARRAY);
@@ -395,27 +395,27 @@ void Example7::DrawSphere(float radius, int slices, int stacks)
 void Example7::DrawPyramid(float distance)
 {
     GLfloat vertices[][3] = {
-        // Cara frontal
-        { 0.0f,  distance,  0.0f},   // punta
-        {-distance, -distance,  distance}, // izquierda base
-        { distance, -distance,  distance}, // derecha base
 
-        // Cara derecha
+        { 0.0f,  distance,  0.0f},   
+        {-distance, -distance,  distance}, 
+        { distance, -distance,  distance}, 
+
+  
         { 0.0f,  distance,  0.0f},
         { distance, -distance,  distance},
         { distance, -distance, -distance},
 
-        // Cara trasera
+
         { 0.0f,  distance,  0.0f},
         { distance, -distance, -distance},
         {-distance, -distance, -distance},
 
-        // Cara izquierda
+
         { 0.0f,  distance,  0.0f},
         {-distance, -distance, -distance},
         {-distance, -distance,  distance},
 
-        // Base (cuadrado)
+
         {-distance, -distance,  distance},
         { distance, -distance,  distance},
         { distance, -distance, -distance},
@@ -423,12 +423,12 @@ void Example7::DrawPyramid(float distance)
     };
 
     GLfloat colores[][3] = {
-        // Caras
-        {1.0f, 0.0f, 0.0f}, {1.0f, 0.5f, 0.0f}, {1.0f, 0.5f, 0.0f}, // frontal
-        {0.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 0.5f}, {0.0f, 1.0f, 0.5f}, // derecha
-        {0.0f, 0.0f, 1.0f}, {0.3f, 0.3f, 1.0f}, {0.3f, 0.3f, 1.0f}, // trasera
-        {1.0f, 1.0f, 0.0f}, {1.0f, 1.0f, 0.5f}, {1.0f, 1.0f, 0.5f}, // izquierda
-        // Base
+
+        {1.0f, 0.0f, 0.0f}, {1.0f, 0.5f, 0.0f}, {1.0f, 0.5f, 0.0f}, 
+        {0.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 0.5f}, {0.0f, 1.0f, 0.5f}, 
+        {0.0f, 0.0f, 1.0f}, {0.3f, 0.3f, 1.0f}, {0.3f, 0.3f, 1.0f}, 
+        {1.0f, 1.0f, 0.0f}, {1.0f, 1.0f, 0.5f}, {1.0f, 1.0f, 0.5f}, 
+
         {0.5f, 0.0f, 0.5f}, {0.5f, 0.0f, 0.5f}, {0.5f, 0.0f, 0.5f}, {0.5f, 0.0f, 0.5f}
     };
 
@@ -441,10 +441,10 @@ void Example7::DrawPyramid(float distance)
     glVertexPointer(3, GL_FLOAT, 0, vertices);
     glColorPointer(3, GL_FLOAT, 0, colores);
 
-    // Dibujar las 4 caras triangulares
+
     glDrawArrays(GL_TRIANGLES, 0, 12);
 
-    // Dibujar la base (cuadrado)
+
     glDrawArrays(GL_QUADS, 12, 4);
 
     glDisableClientState(GL_COLOR_ARRAY);
