@@ -1,10 +1,10 @@
 #include "Example7.h"
 #include <GL/glut.h>
 #include <cmath>
+
 #define PI 3.14159265359
 #define MAX_SLICES 40
 #define MAX_STACKS 40
-
 
 
 void Example7::init()
@@ -16,14 +16,13 @@ void Example7::init()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(2.0, 2.0, 3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+   
 }
 
 void Example7::Render()
 {
-	//DrawCube(1.0);
-	//DrawCuad(1.0);
-	//DrawSphere(1.0, 20, 20);
-	DrawPyramid(1.0);
+
+    Ejercicio1();
 }
 
 void Example7::KeyboardFunc(unsigned char key, int X, int Y)
@@ -455,6 +454,14 @@ void Example7::DrawPyramid(float distance)
 
 void Example7::Ejercicio1()
 {
+    //DrawCube(1.0f);
+    //DrawCuad(1.0f);
+    //DrawSphere(1.0f, 32, 32);
+    //DrawPyramid(1.0f);
+    //DrawCubeIndex(1.0f);
+    //DrawCuadIndex(1.0f);
+    //DrawSphereIndex(1.0f, 32, 32);
+    //DrawPyramidIndex(1.0f);
 }
 
 void Example7::Ejercicio2()
